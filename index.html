@@ -1,371 +1,161 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soldadura Becker - Muebles, Reparaciones y Cercos</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <title>Soldadura Coyhaique | Muebles, Cercos y Reparaciones en Fierro</title>
+    <meta name="description" content="Taller de soldadura al arco en Coyhaique. Fabricación a medida de muebles en fierro y madera, cercos, portones y reparaciones de carrocerías. Trabajos duraderos y de confianza.">
+    <meta name="keywords" content="soldador en coyhaique, soldadura coyhaique, muebles de fierro coyhaique, cercos metalicos coyhaique, reparacion carroceria coyhaique, soldadura 6011 6013">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #1f2937 0%, #374151 100%); }
-        .service-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-        .gallery-item { background: linear-gradient(45deg, #6b7280, #9ca3af); min-height: 200px; }
-        .contact-form { background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); }
+        /* Estilos personalizados y fuentes */
+        body { font-family: 'Roboto', sans-serif; }
+        h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+        .hero-bg { background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1557064259-a3e747374a8a?q=80&w=2070&auto=format&fit=crop'); }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-100 text-gray-800">
 
-    <!-- Header -->
-    <header class="gradient-bg text-white py-4 sticky top-0 z-50 shadow-lg">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center space-x-3">
-                <i class="fas fa-fire text-orange-400 text-2xl"></i>
-                <h1 class="text-2xl font-bold">Soldadura Becker</h1>
+    <header class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Soldadura Coyhaique</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#servicios" class="hover:text-amber-400">Servicios</a>
+                <a href="#proyectos" class="hover:text-amber-400">Proyectos</a>
+                <a href="#contacto" class="hover:text-amber-400">Contacto</a>
             </div>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#inicio" class="hover:text-orange-400 transition">Inicio</a>
-                <a href="#servicios" class="hover:text-orange-400 transition">Servicios</a>
-                <a href="#galeria" class="hover:text-orange-400 transition">Galería</a>
-                <a href="#contacto" class="hover:text-orange-400 transition">Contacto</a>
-            </nav>
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden">
+            <a href="#servicios" class="block px-6 py-2 text-sm hover:bg-gray-800">Servicios</a>
+            <a href="#proyectos" class="block px-6 py-2 text-sm hover:bg-gray-800">Proyectos</a>
+            <a href="#contacto" class="block px-6 py-2 text-sm hover:bg-gray-800">Contacto</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="gradient-bg text-white py-20">
+    <main>
+        <section class="hero-bg bg-cover bg-center text-white">
+            <div class="container mx-auto px-6 py-24 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold uppercase tracking-wider">Soldadura de Confianza</h1>
+                <p class="mt-4 text-lg md:text-xl font-light max-w-2xl mx-auto">Soluciones en fierro para tu hogar y negocio en Coyhaique. Trabajos a medida, resistentes y con el sello de la Patagonia.</p>
+                <div class="mt-8 space-y-4 md:space-y-0 md:space-x-4">
+                    <a href="https://wa.me/56912345678" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                        <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                    </a>
+                    <a href="#proyectos" class="inline-block bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+                        Ver Mis Trabajos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-16 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-10 uppercase">Mis Servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center p-6 bg-gray-50 rounded-lg shadow-lg">
+                        <i class="fas fa-couch text-4xl text-amber-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Muebles en Fierro y Madera</h3>
+                        <p class="text-gray-600">Diseño y fabricación de mesas, sillas, estanterías y más, con un estilo rústico e industrial.</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg shadow-lg">
+                        <i class="fas fa-torii-gate text-4xl text-amber-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Cercos y Portones</h3>
+                        <p class="text-gray-600">Cierres perimetrales y portones a medida, robustos y seguros para tu propiedad.</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg shadow-lg">
+                        <i class="fas fa-truck text-4xl text-amber-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Carrocerías y Reparaciones</h3>
+                        <p class="text-gray-600">Adaptación y reparación de carrocerías de camionetas, y refuerzos estructurales.</p>
+                    </div>
+                    <div class="text-center p-6 bg-gray-50 rounded-lg shadow-lg">
+                        <i class="fas fa-tools text-4xl text-amber-500 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-2">Obras Menores</h3>
+                        <p class="text-gray-600">Rejas de protección, escaleras, soportes y todo tipo de trabajos menores en fierro.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-10 uppercase">Proyectos Realizados</h2>
+                <p class="text-center text-gray-600 mb-12 max-w-xl mx-auto">El trabajo habla por sí mismo. Aquí algunas muestras de la calidad y dedicación en cada proyecto.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <img src="https://via.placeholder.com/400x300.png?text=Mueble+de+Fierro" alt="Mueble de fierro y madera" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/400x300.png?text=Cerco+Metálico" alt="Cerco metálico instalado" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/400x300.png?text=Carrocería+Reparada" alt="Carrocería de camioneta" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/400x300.png?text=Portón+de+Acceso" alt="Portón de acceso" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/400x300.png?text=Estantería+Industrial" alt="Estantería estilo industrial" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                    <img src="https://via.placeholder.com/400x300.png?text=Reja+de+Protección" alt="Reja de protección para ventana" class="w-full h-auto rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-16 bg-gray-800 text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl font-bold mb-4 uppercase">¿Tienes un Proyecto en Mente?</h2>
+                <p class="text-lg text-gray-300 mb-8">Conversemos. Llámame o envíame un WhatsApp y cotiza tu idea sin compromiso.</p>
+                
+                <div class="max-w-md mx-auto bg-gray-900 p-8 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold text-amber-400">[Tu Nombre Completo]</h3>
+                    <p class="text-lg mt-2">Maestro Soldador</p>
+                    <div class="mt-6 text-left space-y-4">
+                        <a href="tel:+56912345678" class="flex items-center text-lg hover:text-amber-400">
+                            <i class="fas fa-phone fa-fw mr-4 text-amber-500"></i>
+                            +56 9 1234 5678
+                        </a>
+                        <a href="https://wa.me/56912345678" target="_blank" class="flex items-center text-lg hover:text-amber-400">
+                            <i class="fab fa-whatsapp fa-fw mr-4 text-green-500"></i>
+                            +56 9 1234 5678
+                        </a>
+                        <a href="mailto:tu.email@ejemplo.com" class="flex items-center text-lg hover:text-amber-400">
+                            <i class="fas fa-envelope fa-fw mr-4 text-amber-500"></i>
+                            tu.email@ejemplo.com
+                        </a>
+                         <p class="flex items-center text-lg">
+                            <i class="fas fa-map-marker-alt fa-fw mr-4 text-amber-500"></i>
+                            Coyhaique, Región de Aysén, Chile
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-6">
         <div class="container mx-auto px-6 text-center">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-5xl font-bold mb-6">Soldadura Profesional</h2>
-                <p class="text-xl mb-8 text-gray-300">Especialista en fabricación de muebles metálicos, reparaciones y construcción de cercos. Calidad garantizada y años de experiencia.</p>
-                <div class="flex justify-center space-x-8 mb-12">
-                    <div class="text-center">
-                        <i class="fas fa-couch text-orange-400 text-3xl mb-2"></i>
-                        <p class="font-semibold">Muebles Metálicos</p>
-                    </div>
-                    <div class="text-center">
-                        <i class="fas fa-tools text-orange-400 text-3xl mb-2"></i>
-                        <p class="font-semibold">Reparaciones</p>
-                    </div>
-                    <div class="text-center">
-                        <i class="fas fa-home text-orange-400 text-3xl mb-2"></i>
-                        <p class="font-semibold">Cercos</p>
-                    </div>
-                </div>
-                <a href="#contacto" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition inline-block">
-                    <i class="fas fa-phone mr-2"></i>Solicitar Presupuesto
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Servicios -->
-    <section id="servicios" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Nuestros Servicios</h2>
-                <p class="text-xl text-gray-600">Trabajos de soldadura con la más alta calidad y precisión</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Muebles -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-couch text-orange-500 text-4xl mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800">Muebles Metálicos</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Mesas y sillas personalizadas</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Estanterías industriales</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Escritorios y archivadores</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Estructuras decorativas</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Mobiliario para exteriores</li>
-                    </ul>
-                </div>
-
-                <!-- Reparaciones -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-tools text-orange-500 text-4xl mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800">Reparaciones</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Reparación de estructuras metálicas</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Soldadura de piezas rotas</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Refuerzo de elementos</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Mantenimiento preventivo</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Restauración de muebles</li>
-                    </ul>
-                </div>
-
-                <!-- Cercos -->
-                <div class="service-card bg-white p-8 rounded-xl shadow-lg border">
-                    <div class="text-center mb-6">
-                        <i class="fas fa-home text-orange-500 text-4xl mb-4"></i>
-                        <h3 class="text-2xl font-bold text-gray-800">Cercos y Portones</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Cercos perimetrales</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Portones automáticos</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Rejas de seguridad</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Cercos decorativos</li>
-                        <li><i class="fas fa-check text-green-500 mr-2"></i>Instalación completa</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galería -->
-    <section id="galeria" class="py-20 bg-gray-100">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Galería de Trabajos</h2>
-                <p class="text-xl text-gray-600">Algunos de nuestros proyectos realizados</p>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="gallery-item rounded-lg shadow-lg flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-couch text-4xl mb-2"></i>
-                        <p class="font-semibold">Mesa Industrial</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg shadow-lg flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-home text-4xl mb-2"></i>
-                        <p class="font-semibold">Cerco Residencial</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg shadow-lg flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-chair text-4xl mb-2"></i>
-                        <p class="font-semibold">Sillas Personalizadas</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg shadow-lg flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-tools text-4xl mb-2"></i>
-                        <p class="font-semibold">Reparación Estructura</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg shadow-lg flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-door-open text-4xl mb-2"></i>
-                        <p class="font-semibold">Portón Automático</p>
-                    </div>
-                </div>
-                <div class="gallery-item rounded-lg shadow-lg flex items-center justify-center">
-                    <div class="text-center text-white">
-                        <i class="fas fa-warehouse text-4xl mb-2"></i>
-                        <p class="font-semibold">Estantería Industrial</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre Mí -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-4xl font-bold text-gray-800 mb-8">¿Por qué elegir Soldadura Becker?</h2>
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-medal text-orange-500 text-2xl mt-1"></i>
-                                <div>
-                                    <h3 class="font-bold text-lg text-gray-800">Experiencia Comprobada</h3>
-                                    <p class="text-gray-600">Años de experiencia en soldadura profesional y fabricación metálica</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-handshake text-orange-500 text-2xl mt-1"></i>
-                                <div>
-                                    <h3 class="font-bold text-lg text-gray-800">Compromiso con la Calidad</h3>
-                                    <p class="text-gray-600">Cada proyecto se realiza con los más altos estándares de calidad</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-clock text-orange-500 text-2xl mt-1"></i>
-                                <div>
-                                    <h3 class="font-bold text-lg text-gray-800">Puntualidad Garantizada</h3>
-                                    <p class="text-gray-600">Respetamos los tiempos de entrega acordados</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-dollar-sign text-orange-500 text-2xl mt-1"></i>
-                                <div>
-                                    <h3 class="font-bold text-lg text-gray-800">Precios Competitivos</h3>
-                                    <p class="text-gray-600">Presupuestos justos y transparentes sin sorpresas</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-map-marker-alt text-orange-500 text-2xl mt-1"></i>
-                                <div>
-                                    <h3 class="font-bold text-lg text-gray-800">Servicio Local</h3>
-                                    <p class="text-gray-600">Trabajamos en toda la zona con desplazamiento incluido</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <i class="fas fa-shield-alt text-orange-500 text-2xl mt-1"></i>
-                                <div>
-                                    <h3 class="font-bold text-lg text-gray-800">Garantía de Trabajo</h3>
-                                    <p class="text-gray-600">Todos nuestros trabajos incluyen garantía por defectos</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="py-20 contact-form">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">Contacto</h2>
-                <p class="text-xl text-gray-600">¿Tienes un proyecto en mente? ¡Hablemos!</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                <!-- Información de contacto -->
-                <div class="space-y-8">
-                    <div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Información de Contacto</h3>
-                        <div class="space-y-4">
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-phone text-orange-500 text-xl"></i>
-                                <div>
-                                    <p class="font-semibold text-gray-800">Teléfono</p>
-                                    <p class="text-gray-600">+54 9 XX XXXX-XXXX</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-envelope text-orange-500 text-xl"></i>
-                                <div>
-                                    <p class="font-semibold text-gray-800">Email</p>
-                                    <p class="text-gray-600">becker@soldadura.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-map-marker-alt text-orange-500 text-xl"></i>
-                                <div>
-                                    <p class="font-semibold text-gray-800">Ubicación</p>
-                                    <p class="text-gray-600">Tu Ciudad, Provincia</p>
-                                </div>
-                            </div>
-                            <div class="flex items-center space-x-4">
-                                <i class="fas fa-clock text-orange-500 text-xl"></i>
-                                <div>
-                                    <p class="font-semibold text-gray-800">Horarios</p>
-                                    <p class="text-gray-600">Lun - Vie: 8:00 - 18:00</p>
-                                    <p class="text-gray-600">Sáb: 8:00 - 14:00</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Formulario -->
-                <div class="bg-white p-8 rounded-xl shadow-lg">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Solicitar Presupuesto</h3>
-                    <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Nombre</label>
-                                <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="Tu nombre">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2">Teléfono</label>
-                                <input type="tel" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="Tu teléfono">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-semibold mb-2">Email</label>
-                            <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="tu@email.com">
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-semibold mb-2">Tipo de Servicio</label>
-                            <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500">
-                                <option>Seleccionar servicio</option>
-                                <option>Muebles Metálicos</option>
-                                <option>Reparaciones</option>
-                                <option>Cercos y Portones</option>
-                                <option>Otro</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-gray-700 font-semibold mb-2">Descripción del Proyecto</label>
-                            <textarea rows="4" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-orange-500" placeholder="Describe tu proyecto..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 px-6 rounded-lg font-semibold transition">
-                            <i class="fas fa-paper-plane mr-2"></i>Enviar Solicitud
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="gradient-bg text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <div class="flex items-center space-x-3 mb-4">
-                        <i class="fas fa-fire text-orange-400 text-2xl"></i>
-                        <h3 class="text-xl font-bold">Soldadura Becker</h3>
-                    </div>
-                    <p class="text-gray-300">Soldadura profesional especializada en muebles metálicos, reparaciones y cercos. Calidad y experiencia garantizada.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Servicios</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li>Muebles Metálicos</li>
-                        <li>Reparaciones</li>
-                        <li>Cercos y Portones</li>
-                        <li>Estructuras Personalizadas</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Contacto Rápido</h4>
-                    <div class="space-y-2 text-gray-300">
-                        <p><i class="fas fa-phone mr-2"></i>+54 9 XX XXXX-XXXX</p>
-                        <p><i class="fas fa-envelope mr-2"></i>becker@soldadura.com</p>
-                        <p><i class="fas fa-map-marker-alt mr-2"></i>Tu Ciudad, Provincia</p>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-gray-300">
-                <p>&copy; 2024 Soldadura Becker. Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2025 Soldadura Coyhaique. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Sitio web diseñado para ser rápido y directo.</p>
         </div>
     </footer>
 
     <script>
-        // Smooth scrolling para los enlaces de navegación
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Cierra el menú móvil al hacer clic en un enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
             });
         });
-
-        // Formulario de contacto
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('¡Gracias por tu consulta! Te contactaremos pronto.');
-        });
     </script>
+
 </body>
 </html>
